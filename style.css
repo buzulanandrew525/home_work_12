@@ -1,0 +1,182 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    font-size: 1rem;
+    background-color: aqua;
+    width: 100%;
+    animation: mask 7.5s infinite ease 7.5s;
+
+}
+
+@keyframes mask {
+    0%, 100% {
+        mask-image: linear-gradient(to bottom, transparent, #000);
+        background-color: #000;
+    }
+}
+
+.container {
+    position: relative;
+    animation: sun 15s infinite linear 0s;
+    animation-direction: alternate;
+}
+
+.sun {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    z-index: 5;
+}
+
+.face {
+    width: 150px;
+    left: 75px;
+    top: 70px;
+    transform: rotate(360deg);
+    position: absolute;
+    z-index: 10;
+    background-color: rgb(254, 230, 59);
+    border-radius: 50%;
+}
+
+.sun:hover {
+    transform: rotate(1800deg);
+    transition: all 5s;
+}
+
+.container:active {
+    animation-play-state:paused;
+}
+
+@keyframes sun {
+    0% {
+        top: 200px;
+        left: 200px;
+
+    }
+
+    25% {
+        top: 20px;
+        left: 500px;
+    }
+
+    50% {
+        top: 20px;
+        left: 900px;
+    }
+
+    100% {
+        top: 200px;
+        left: 1200px;
+    }
+    
+}
+
+.background__image {
+    width: 100%;
+    position: fixed;
+}
+
+.tree {
+    position: fixed;
+    outline: 2px solid red;
+    width: 250px;
+    left: 200px;
+    top: 300px;
+    z-index: 15;
+}
+
+.tree:hover {
+    transform: skew(5deg, 3deg);
+    transition: all 0.5s;
+}
+
+.big__tree {
+    position: fixed;
+    outline: 2px solid red;
+    width: 350px;
+    left: 500px;
+    top: 350px;
+    z-index: 15;
+}
+
+.big__tree:hover {
+    transform: skew(3deg, 5deg);
+    transition: all 0.5s;
+}
+
+.spruce {
+    position: fixed;
+    outline: 2px solid red;
+    width: 250px;
+    left: 1000px;
+    top: 300px;
+    z-index: 15;
+}
+
+.spruce:hover {
+    transform: skew(5deg, 5deg);
+    transition: all 0.5s;
+}
+
+.bush {
+    position: fixed;
+    outline: 2px solid red;
+    width: 250px;
+    left: 100px;
+    top: 650px;
+    z-index: 15;
+}
+
+.bush:hover {
+    transform: skew(3deg, 5deg);
+    transition: all 0.5s;
+}
+
+.big__bush {
+    position: fixed;
+    outline: 2px solid red;
+    width: 350px;
+    left: 1200px;
+    top: 600px;
+    z-index: 15;
+}
+
+.big__bush:hover {
+    transform: skew(3deg, 5deg);
+    transition: all 0.5s;
+}
+
+.squirrel {
+    position: fixed;
+    outline: 2px solid red;
+    width: 200px;
+    left: 500px;
+    top: 700px;
+    z-index: 15;
+}
+
+.squirrel__img {
+    width: 50%;
+}
+
+.squirrel:hover {
+    transform: translate(120px);
+    transition: all 0.5s;
+}
